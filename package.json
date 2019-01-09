@@ -1,5 +1,5 @@
 {
-  "name": "react-native-zendesk",
+  "name": "@datacamp/react-native-zendesk",
   "version": "1.0.4",
   "description": "Zendesk SDK for React Native.",
   "main": "index.js",
