@@ -15,6 +15,8 @@ RCT_EXTERN_METHOD(initialize:(NSDictionary *)config);
 
 RCT_EXTERN_METHOD(identifyJWT:(NSString *)token);
 
+RCT_EXTERN_METHOD(identify:(NSString *)name email:(NSString *)email);
+
 RCT_EXTERN_METHOD(showHelpCenter:(NSDictionary *)options);
 
 RCT_EXTERN_METHOD(showNewTicket:(NSDictionary *)options);
