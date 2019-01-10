@@ -3,6 +3,7 @@ package io.dcvz.rnzendesk;
 import zendesk.core.Zendesk;
 import zendesk.core.Identity;
 import zendesk.core.JwtIdentity;
+import zendesk.core.AnonymousIdentity;
 import zendesk.support.Support;
 import zendesk.support.UiConfig;
 import zendesk.support.guide.HelpCenterActivity;
@@ -41,6 +42,16 @@ public class RNZendeskBridge extends ReactContextBaseJavaModule {
         JwtIdentity identity = new JwtIdentity(token);
         Zendesk.INSTANCE.setIdentity(identity);
     }
+
+    @ReactMethod
+    public void identify(String name, String email) {
+        Identity identity = new AnonymousIdentity.Builder()
+            .withNameIdentifier(name)
+            .withEmailIdentifier(email)
+            .build();
+        Zendesk.INSTANCE.setIdentity(identity);
+    }
+
 
     @ReactMethod
     public void showHelpCenter(ReadableMap options) {
