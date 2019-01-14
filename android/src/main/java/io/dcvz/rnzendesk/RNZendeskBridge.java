@@ -60,7 +60,7 @@ public class RNZendeskBridge extends ReactContextBaseJavaModule {
                 .config();
 
         HelpCenterActivity.builder()
-                .show(getReactApplicationContext(), hcConfig);
+                .show(getCurrentActivity(), hcConfig);
     }
     
     @ReactMethod
